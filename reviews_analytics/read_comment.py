@@ -15,3 +15,12 @@ sum_len = 0
 for comment in data:
     sum_len += len(comment)
 print('每則留言平均有', sum_len / len(data), '字')
+
+filter_comment_lower_100_word = []
+for comment_lower_100_word in data:
+    if len(comment_lower_100_word) < 100:
+        filter_comment_lower_100_word.append(comment_lower_100_word)
+print('超過100字的留言有', len(filter_comment_lower_100_word), '則')
+print(filter_comment_lower_100_word[0])
+
+
