@@ -23,4 +23,9 @@ for comment_lower_100_word in data:
 print('超過100字的留言有', len(filter_comment_lower_100_word), '則')
 print(filter_comment_lower_100_word[0])
 
-
+filter_comment_include_good = []
+for comment_include_good in data:
+    if 'good' in comment_include_good:
+        filter_comment_include_good.append(comment_include_good)
+print('提到good的留言有', len(filter_comment_include_good), '則')
+print(filter_comment_include_good[0])
