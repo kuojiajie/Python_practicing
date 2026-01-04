@@ -13,6 +13,7 @@ with open('product.txt', 'w') as file:
     for product in product_scan_code:
         file.write(product[0] + ',' + str(product[1]) + '\n')
 
-with open('product.csv', 'w') as file:
+with open('product.csv', 'w', encoding = 'utf-8') as file:
+    file.write('商品, 價格\n')
     for product in product_scan_code:
         file.write(product[0] + ',' + str(product[1]) + '\n')
