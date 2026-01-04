@@ -1,6 +1,8 @@
 product_scan_code = []
 with open('product.csv', 'r', encoding='utf-8') as file:
     for line in file:
+        if '商品, 價格' in line:
+            continue
         name, price = line.strip().split(',')
         product_scan_code.append([name, price])
 print(product_scan_code)
