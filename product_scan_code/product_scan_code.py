@@ -1,4 +1,10 @@
 product_scan_code = []
+with open('product.csv', 'r', encoding='utf-8') as file:
+    for line in file:
+        name, price = line.strip().split(',')
+        product_scan_code.append([name, price])
+print(product_scan_code)
+
 while True:
     product_name = input('請輸入商品名稱: ')
     if product_name == 'q':
