@@ -8,3 +8,11 @@ while True:
 print('商品清單: ', product_scan_code)
 for product in product_scan_code:
     print(product[0], '的價格為', product[1])
+
+with open('product.txt', 'w') as file:
+    for product in product_scan_code:
+        file.write(product[0] + ',' + str(product[1]) + '\n')
+
+with open('product.csv', 'w') as file:
+    for product in product_scan_code:
+        file.write(product[0] + ',' + str(product[1]) + '\n')
