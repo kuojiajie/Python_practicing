@@ -19,8 +19,8 @@ for line in data:
             word_count[word] = 1 #新增key，value為1
     
 for word in word_count:
-    if word_count[word] > 100:
-        print(word, word_count)
+    if word_count[word] > 1000000:
+        print(word, word_count[word])
 
 print(len(word_count))
 print(word_count['jack'])
