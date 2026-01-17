@@ -1,13 +1,17 @@
 import time
+import progressbar
 
 data = []
 count = 0
 start_time = time.time()
+bar = progressbar.ProgressBar(maxval = 1000000)
+bar.start()
 with open('reviews.txt', 'r') as file:
     for line in file:
         data.append(line)
-        if count % 1000 == 0:
-            print(len(data))
+        count += 1
+        bar.update(count)
+bar.finish() 
 end_time = time.time()
 print('讀取時間:', end_time - start_time,'秒')
 print('讀取完畢，一共有', len(data), '則留言')
